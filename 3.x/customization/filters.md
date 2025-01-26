@@ -1,7 +1,5 @@
 # Filters
 
-[[toc]]
-
 ## Overview
 
 Nova ships with several filter types; however, sometimes you may need a filter type that isn't provided out of the box. For this reason, Nova allows you to build custom filters.
@@ -120,10 +118,8 @@ public function boot()
 }
 ```
 
-:::tip JavaScript Bootstrap & Routing
-
-Your components are bootstrapped and registered in the `resources/js/filter.js` file. You are free to modify this file or register additional components here as needed.
-:::
+> [!TIP]
+> Your components are bootstrapped and registered in the `resources/js/filter.js` file. You are free to modify this file or register additional components here as needed.
 
 #### Compiling Assets
 

@@ -1,7 +1,5 @@
 # CSS / JavaScript
 
-[[toc]]
-
 ## JavaScript
 
 When building custom Nova tools, resource tools, cards, and fields, you may use a variety of helpers that are globally available to your JavaScript components.
