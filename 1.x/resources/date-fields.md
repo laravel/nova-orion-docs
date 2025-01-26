@@ -1,7 +1,5 @@
 # Date Fields
 
-[[toc]]
-
 Nova offers two types of date fields: `Date` and `DateTime`. As you may have guessed, the `Date` field does not store time information, while the `DateTime` field does:
 
 ```php
