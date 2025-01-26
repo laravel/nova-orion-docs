@@ -1,7 +1,5 @@
 # Defining Metrics
 
-[[toc]]
-
 Nova metrics allow you to quickly gain insight on key business indicators for your application. For example, you may define a metric to display the total number of users added to your application per day, or the amount of weekly sales.
 
 Nova offers three types of built-in metrics: value, trend, and partition. We'll examine each type of metric and demonstrate their usage below.
@@ -166,10 +164,8 @@ public function ranges()
 }
 ```
 
-:::danger MTD / QTD / YTD Range Keys
-
-You may customize these ranges to suit your needs; however, if you are using the built-in "Month To Date", "Quarter To Date", or "Year To Date" ranges, you should not change their keys.
-:::
+> [!CAUTION]
+> You may customize these ranges to suit your needs; however, if you are using the built-in "Month To Date", "Quarter To Date", or "Year To Date" ranges, you should not change their keys.
 
 ### Manually Building Value Results
 
