@@ -1,7 +1,5 @@
 # Cards
 
-[[toc]]
-
 ## Overview
 
 Cards are similar to resource tools, but are small, miniature tools that are typically displayed at the top of your dashboard, resource index, or resource detail pages. In fact, if you have used [Nova metrics](./../metrics/defining-metrics.md), you have already seen Nova cards. Custom Nova cards allow you to build own, metric-sized tools.
@@ -114,10 +112,8 @@ Often, you will need to define Laravel routes that are called by your card. When
 
 All routes within this file are automatically defined inside a route group by your card's `CardServiceProvider`. The route group specifies that all routes within the group should receive a `/nova-vendor/card-name` prefix, where `card-name` is the "kebab-case" name of your card. So, for example, `/nova-vendor/analytics`. You are free to modify this route group definition, but take care to make sure your Nova card will co-exist with other Nova packages.
 
-:::danger Routing Authorization
-
-When building routes for your card, you should **always** add authorization to these routes using Laravel gates or policies.
-:::
+> [!CAUTION]
+> When building routes for your card, you should **always** add authorization to these routes using Laravel gates or policies.
 
 ### Assets
 
@@ -156,10 +152,8 @@ public function boot()
 }
 ```
 
-:::tip JavaScript Bootstrap & Routing
-
-Your component is bootstrapped and registered in the `resources/js/card.js` file. You are free to modify this file or register additional components here as needed.
-:::
+> [!TIP]
+> Your component is bootstrapped and registered in the `resources/js/card.js` file. You are free to modify this file or register additional components here as needed.
 
 #### Compiling Assets
 
