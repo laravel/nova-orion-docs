@@ -179,10 +179,8 @@ use Laravel\Nova\Fields\Code;
 Code::make('Snippet')
 ```
 
-:::tip Code Fields On The Index
-
-By default, Nova will never display a `Code` field on a resource index listing.
-:::
+> [!TIP]
+> By default, Nova will never display a `Code` field on a resource index listing.
 
 #### Editing JSON
 
