@@ -1,7 +1,5 @@
 # Fields
 
-[[toc]]
-
 ## Defining Fields
 
 Each Nova resource contains a `fields` method. This method returns an array of fields, which generally extend the `Laravel\Nova\Fields\Field` class. Nova ships with a variety of fields out of the box, including fields for text inputs, booleans, dates, file uploads, Markdown, and more.
@@ -124,9 +122,8 @@ The available methods for individual display contexts are:
 - `fieldsForCreate`
 - `fieldsForUpdate`
 
-:::tip Dynamic Field Methods Precedence ::
-The `fieldsForIndex`, `fieldsForDetail`, `fieldsForCreate`, and `fieldsForUpdate` methods always take precedence over the `fields` method.
-:::
+> [!TIP]
+> The `fieldsForIndex`, `fieldsForDetail`, `fieldsForCreate`, and `fieldsForUpdate` methods always take precedence over the `fields` method.
 
 ## Field Panels
 
@@ -194,10 +191,8 @@ Text::make('Name', 'name_column')->sortable(),
 
 ## Field Types
 
-:::tip Relationship Fields
-
-This portion of the documentation only discusses non-relationship fields. To learn more about relationship fields, [check out their documentation](/1.0/resources/relationships.html).
-:::
+> [!TIP]
+> This portion of the documentation only discusses non-relationship fields. To learn more about relationship fields, [check out their documentation](/1.0/resources/relationships.html).
 
 Nova ships with a variety of field types. So, let's explore all of the available types and their options:
 
@@ -346,10 +341,8 @@ use Laravel\Nova\Fields\Code;
 Code::make('Snippet'),
 ```
 
-:::tip Code Fields On The Index
-
-By default, Nova will never display a `Code` field on a resource index listing.
-:::
+> [!TIP]
+> By default, Nova will never display a `Code` field on a resource index listing.
 
 #### Editing JSON
 
@@ -359,9 +352,8 @@ If you intend to use a given `Code` field instance to only edit JSON, you may ch
 Code::make('Options')->json(),
 ```
 
-:::warning Code field JSON validation
-Note: Nova does not apply the `json` validation for `Code` fields automatically. It's up to the user to specify this rule.
-:::
+> [!WARNING]
+> Note: Nova does not apply the `json` validation for `Code` fields automatically. It's up to the user to specify this rule.
 
 #### Syntax Highlighting
 
@@ -397,12 +389,8 @@ Country::make('Country', 'country_code'),
 
 ### Currency Field
 
-:::tip Currency Field Versioning
-
-This documentation refers to the `Currency` field from v2.11.0 onwards. Prior to this, the field was incompatible with PHP 7.4.
-
-:::
-
+> [!TIP]
+> This documentation refers to the `Currency` field from v2.11.0 onwards. Prior to this, the field was incompatible with PHP 7.4.
 
 The `Currency` field generates a `Number` field that is automatically formatted using `brick/money`. Nova will use `USD` as the default currency however, this can be changed by modifiying the `nova.currency` value.
 
@@ -527,10 +515,8 @@ If you need to render HTML content within the `Heading` field, use the `asHtml` 
 Heading::make('<p class="text-danger">* All fields are required.</p>')->asHtml(),
 ```
 
-::: tip Headings And Indexes
-
-`Heading` fields are automatically hidden from the resource index page.
-:::
+> [!TIP]
+> `Heading` fields are automatically hidden from the resource index page.
 
 ### ID Field
 
@@ -567,10 +553,8 @@ Image::make('Photo')->disableDownload(),
 
 You may use the `squared` method to display the image's thumbnail with squared edges. Additionally, you may use the `rounded` method to display its thumbnails with fully-rounded edges.
 
-:::tip File Fields
-
-To learn more about defining file fields and handling uploads, check out the additional [file field documentation](./file-fields.md).
-:::
+> [!TIP]
+> To learn more about defining file fields and handling uploads, check out the additional [file field documentation](./file-fields.md).
 
 ### KeyValue Field
 
@@ -597,10 +581,8 @@ KeyValue::make('Meta')
     ->actionText('Add Item'), // Customize the "add row" button text
 ```
 
-:::tip KeyValue Fields On The Index
-
-By default, Nova will never display a `KeyValue` field on a resource index listing.
-:::
+> [!TIP]
+> By default, Nova will never display a `KeyValue` field on a resource index listing.
 
 ### Markdown Field
 
@@ -721,10 +703,8 @@ If you intend to use the `Place` field to search for cities instead of addresses
 Place::make('City')->onlyCities(),
 ```
 
-:::tip City Auto-Completion
-
-When using the `Place` field as a city search, the `state` and `country` fields will still receive auto-completion. However, the `postal_code` field will not.
-:::
+> [!TIP]
+> When using the `Place` field as a city search, the `state` and `country` fields will still receive auto-completion. However, the `postal_code` field will not.
 
 #### Configuring Field Auto-Completion
 
@@ -832,10 +812,8 @@ return $this->countByDays(
 );
 ```
 
-:::tip Default Ranges
-
-A `Sparkline` will always use the first range defined in the `ranges` method of a `Trend`.
-:::
+> [!TIP]
+> A `Sparkline` will always use the first range defined in the `ranges` method of a `Trend`.
 
 #### Customizing The Chart
 
@@ -1014,10 +992,8 @@ Text::make('Name', function () {
 }),
 ```
 
-:::tip Model Attribute Access
-
-As you may have noticed in the example above, you may use `$this` to access the resource's underlying model attributes and relationships.
-:::
+> [!TIP]
+> As you may have noticed in the example above, you may use `$this` to access the resource's underlying model attributes and relationships.
 
 By default, Vue will escape the content of a computed field. If you need to render HTML content within the field, use the `asHtml` method:
 
