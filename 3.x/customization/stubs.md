@@ -1,16 +1,11 @@
 # Stubs
 
-[[toc]]
-
 ## Overview
 
 When creating new resources, actions, filters, lens and metrics, Nova will publish files using the default stub files. However, you may wish to customize these for your projects to apply common modifications automatically.
 
-:::tip Laravel Stub Customization
-
-To learn more about stub customization, please consult the [Laravel documentation](https://laravel.com/docs/master/artisan#stub-customization).
-
-:::
+> [!TIP]
+> To learn more about stub customization, please consult the [Laravel documentation](https://laravel.com/docs/master/artisan#stub-customization).
 
 ## Publishing Stubs
 

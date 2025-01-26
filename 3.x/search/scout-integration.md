@@ -1,7 +1,5 @@
 # Scout Integration
 
-[[toc]]
-
 By default, Nova searches your resources using the resource's database columns.
  However, this can become inefficient and lacks support for robust fuzzy matching capabilities provided by "real" search engines.
 
