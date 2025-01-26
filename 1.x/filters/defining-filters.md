@@ -1,7 +1,5 @@
 # Defining Filters
 
-[[toc]]
-
 Nova filters allow you to scope your Nova index queries with custom conditions. For example, you may wish to define a filter to quickly view "Admin" users within your application:
 
 ![Filters](./img/filters.png)
