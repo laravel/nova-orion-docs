@@ -139,10 +139,8 @@ Route::get('/download', function () {
 });
 ```
 
-:::tip File Downloads
-
-When using the `storeOriginalName` method, the file field's "Download" link within the Nova dashboard will automatically download the file using its original name.
-:::
+> [!TIP]
+> When using the `storeOriginalName` method, the file field's "Download" link within the Nova dashboard will automatically download the file using its original name.
 
 ## Pruning & Deletion
 
@@ -158,10 +156,8 @@ The `File` field, as well as the `Image` and `Avatar` fields, may be marked as `
 File::make('Profile Photo')->disk('public')->prunable();
 ```
 
-:::warning Non-Nova Deletes
-
-Nova will only automatically prune files for model deletes that are initiated within Nova. Other portions of your application may need to implement their own file deletion logic.
-:::
+> [!WARNING]
+> Nova will only automatically prune files for model deletes that are initiated within Nova. Other portions of your application may need to implement their own file deletion logic.
 
 ## Customization
 
