@@ -1,7 +1,5 @@
 # Tools
 
-[[toc]]
-
 ## Overview
 
 Sometimes, your business may need additional functionality that isn't provided by Nova. For this reason, Nova allows you to build custom tools and add them to the Nova sidebar. Nova tools are incredibly customizable, as they primarily consist of a single-file Vue component that is totally under your control. Within your Vue component, you are free to make HTTP requests to any controller within your application.
@@ -115,10 +113,8 @@ public function boot()
 }
 ```
 
-:::tip JavaScript Bootstrap & Routing
-
-Your component is bootstrapped and front-end routes are registered in the `resources/js/tool.js` file. You are free to modify this file or register additional components here as needed.
-:::
+> [!TIP]
+> Your component is bootstrapped and front-end routes are registered in the `resources/js/tool.js` file. You are free to modify this file or register additional components here as needed.
 
 #### Compiling Assets
 
