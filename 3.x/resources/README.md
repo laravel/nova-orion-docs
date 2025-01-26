@@ -40,10 +40,8 @@ Freshly created Nova resources only contain an `ID` field definition. Don't worr
 
 ## Registering Resources
 
-:::tip Automatic Registration
-
-By default, all resources within the `app/Nova` directory will automatically be registered with Nova. You are not required to manually register them.
-:::
+> [!TIP]
+> By default, all resources within the `app/Nova` directory will automatically be registered with Nova. You are not required to manually register them.
 
 Before resources are available within your Nova dashboard, they must first be registered with Nova. Resources are typically registered in your `app/Providers/NovaServiceProvider.php` file. This file contains various configuration and bootstrapping code related to your Nova installation.
 
@@ -268,10 +266,8 @@ public static function trafficCop(Request $request)
 }
 ```
 
-:::tip Time Synchronization
-
-If you are experiencing issues with traffic cop you may first want to check that the system time is correctly synchronized using NTP.
-:::
+> [!TIP]
+> If you are experiencing issues with traffic cop you may first want to check that the system time is correctly synchronized using NTP.
 
 ## Resource Polling
 
@@ -335,10 +331,8 @@ Nova allows you to easily customize where a user is redirected after performing 
 - [redirectAfterUpdate()](#after-updating-redirection)
 - [redirectAfterDelete()](#after-deletion-redirection)
 
-:::warning Redirection Limitation
-
-Behind the scene, Nova's redirect features use the Vue router's `push()` method. Because of this, redirection is limited to paths within Laravel Nova.
-:::
+> [!WARNING]
+> Behind the scene, Nova's redirect features use the Vue router's `push()` method. Because of this, redirection is limited to paths within Laravel Nova.
 
 #### After Creating Redirection
 
@@ -435,10 +429,8 @@ public static function perPageOptions()
 }
 ```
 
-:::tip Customizing <code>perPageOptions</code> & Resource Fetching
-
-Changing the value of `perPageOptions` on your `Resource` will cause Nova to fetch the number of resources equal to the first value in the `perPageOptions` array.
-:::
+> [!TIP]
+> Changing the value of `perPageOptions` on your `Resource` will cause Nova to fetch the number of resources equal to the first value in the `perPageOptions` array.
 
 ### Resource Index Search Debounce
 
