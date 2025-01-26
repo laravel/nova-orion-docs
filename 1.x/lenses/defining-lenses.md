@@ -1,7 +1,5 @@
 # Defining Lenses
 
-[[toc]]
-
 While similar to filters, Nova lenses allow you to fully customize the underlying resource Eloquent query. For example, you may want to list of all your application's users sorted by their total lifetime revenue. Creating such a list may require you to join to additional tables and perform aggregate functions within the query. If it sounds complicated, don't worry - this is exactly the type of situation lenses are designed to solve:
 
 ![Lens](./img/lens.png)
@@ -125,15 +123,11 @@ class MostValuableUsers extends Lens
 }
 ```
 
-:::tip Columns Method
+> [!TIP]
+> In this example, the `columns` method has been extracted from the `query` method for readability. It is not "required" and is not a "feature" of lenses.
 
-In this example, the `columns` method has been extracted from the `query` method for readability. It is not "required" and is not a "feature" of lenses.
-:::
-
-:::warning Lens Column Selection
-
-When writing your lens query, you should always try to include the resource's ID as a selected column. If the ID is not included, Nova will not be able to display the "Select All Matching" option for the lens. In addition, the resource deletion menu will not be available.
-:::
+> [!WARNING]
+> When writing your lens query, you should always try to include the resource's ID as a selected column. If the ID is not included, Nova will not be able to display the "Select All Matching" option for the lens. In addition, the resource deletion menu will not be available.
 
 As you can see in the example above, the `query` method has full control of the Eloquent query used to retrieve the lens data. The `fields` method may leverage any of Nova's fields in order to appropriately display the data retrieved by the query.
 
@@ -194,7 +188,5 @@ public function actions(Request $request)
 }
 ```
 
-:::warning Resource Actions
-
-By default, lens will inherit the actions of their associated resource. However, you may override the `actions` method on the lens to define a custom set of actions that should be available to the lens.
-:::
+> [!WARNING]
+> By default, lens will inherit the actions of their associated resource. However, you may override the `actions` method on the lens to define a custom set of actions that should be available to the lens.
