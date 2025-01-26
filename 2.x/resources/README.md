@@ -1,7 +1,5 @@
 # The Basics
 
-[[toc]]
-
 Laravel Nova is a beautiful administration dashboard for Laravel applications. The primary feature of Nova is the ability to administer your underlying database records using Eloquent. Nova accomplishes this by allowing you to define a Nova "resource" that corresponds to each Eloquent model in your application.
 
 ## Defining Resources
@@ -27,10 +25,8 @@ Freshly created Nova resources only contain an `ID` field definition. Don't worr
 
 ## Registering Resources
 
-:::tip Automatic Registration
-
-By default, all resources within the `app/Nova` directory will automatically be registered with Nova. You are not required to manually register them.
-:::
+> [!TIP]
+> By default, all resources within the `app/Nova` directory will automatically be registered with Nova. You are not required to manually register them.
 
 Before resources are available within your Nova dashboard, they must first be registered with Nova. Resources are typically registered in your `app/Providers/NovaServiceProvider.php` file. This file contains various configuration and bootstrapping code related to your Nova installation.
 
@@ -201,10 +197,8 @@ public static function trafficCop(Request $request)
     return static::$trafficCop;
 }
 ```
-
-:::tip Time Synchronization
-Before disabling Traffic Cop, if you are experiencing issues you may first want to check that the system time is correctly synchronized using NTP. 
-:::
+> [!TIP]
+> Before disabling Traffic Cop, if you are experiencing issues you may first want to check that the system time is correctly synchronized using NTP. 
 
 ## Keyboard Shortcuts
 
@@ -248,9 +242,8 @@ public static function perPageOptions()
 }
 ```
 
-:::tip Customizing `perPageOptions` affects the initial amount of resources fetched.
-Changing the value of `perPageOptions` on your `Resource` will cause Nova to fetch the number of resources equal to the first value in the `perPageOptions` array.
-:::
+> [!TIP]
+> Changing the value of `perPageOptions` on your `Resource` will cause Nova to fetch the number of resources equal to the first value in the `perPageOptions` array.
 
 
 ## Customizing Redirect Behavior
