@@ -1,15 +1,11 @@
 # Global Search
 
-[[toc]]
-
 Nova not only allows you to search within specific resources and relationships, you may also globally search across all your resources using the global search input within the top-navigation bar of the Nova administration panel:
 
 ![Global Search](./img/global-search.png)
 
-:::tip Focusing Global Search
-
-You can focus the global search input by pressing `/` (forward slash) on your keyboard. Pressing `ESC` (escape key) will also close the global search input.
-:::
+> [!TIP]
+> You can focus the global search input by pressing `/` (forward slash) on your keyboard. Pressing `ESC` (escape key) will also close the global search input.
 
 ### Searchable Columns
 
@@ -26,10 +22,8 @@ public static $search = [
 ];
 ```
 
-:::warning Scout Integration
-
-If you are using Nova's Scout integration, the `$search` column has no effect on your search results and may be ignored. You should manage the searchable columns in the Algolia dashboard.
-:::
+> [!WARNING]
+> If you are using Nova's Scout integration, the `$search` column has no effect on your search results and may be ignored. You should manage the searchable columns in the Algolia dashboard.
 
 ### Title / Subtitle Attributes
 
@@ -60,10 +54,8 @@ public function title()
 }
 ```
 
-:::tip Displaying Avatar in Search Results
-
-You may also display resource's "avatar" next to the title in the search result by adding an [Avatar](./../resources/fields.md#avatar-field) field to the resource.
-:::
+> [!TIP]
+> You may also display resource's "avatar" next to the title in the search result by adding an [Avatar](./../resources/fields.md#avatar-field) field to the resource.
 
 #### Subtitles
 
@@ -85,10 +77,8 @@ public function subtitle()
 }
 ```
 
-:::tip Eager Loading
-
-If your subtitle accesses information on a related resource, you should consider adding the related resource to your resource's [eager load array](./../resources/README.md#eager-loading).
-:::
+> [!TIP]
+> If your subtitle accesses information on a related resource, you should consider adding the related resource to your resource's [eager load array](./../resources/README.md#eager-loading).
 
 ### Disabling Global Search
 
