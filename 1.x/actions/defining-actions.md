@@ -1,7 +1,5 @@
 # Defining Actions
 
-[[toc]]
-
 Nova actions allow you to perform custom tasks on one or more Eloquent models. For example, you might write an action that sends an email to a user containing account data they have requested. Or, you might write an action to transfer a group of records to another user.
 
 Once an action has been attached to a resource definition, you may initiate it from the resource's index or detail pages:
@@ -212,10 +210,8 @@ class EmailAccountProfile extends Action implements ShouldQueue
 
 When using queued actions, don't forget to configure and start queue workers for your application. Otherwise, your actions won't be processed.
 
-:::danger Queued Action Files
-
-At this time, Nova does not support attaching `File` fields to a queued action. If you need to attach a `File` field to an action, the action must be run synchronously.
-:::
+> [!CAUTION]
+> At this time, Nova does not support attaching `File` fields to a queued action. If you need to attach a `File` field to an action, the action must be run synchronously.
 
 #### Customizing The Connection And Queue
 
