@@ -1,7 +1,5 @@
 # File Fields
 
-[[toc]]
-
 Nova offers several types of file fields: `File`, `Image`, and `Avatar`. The `File` field is the most basic form of file upload field, and is the base class for both the `Image` and `Avatar` field classes. In the following documentation, we will explore each of these fields and discuss their similarities and differences.
 
 ## Overview
@@ -56,10 +54,8 @@ Storage::url($user->profile_photo);
 
 If you are using the `public` disk with the `local` driver, you should run the `php artisan storage:link` Artisan command to create a symbolic link from `public/storage` to `storage/app/public`. To learn more about file storage in Laravel, check out the [Laravel file storage documentation](https://laravel.com/docs/filesystem).
 
-:::tip Customization
-
-The documentation above only demonstrates the default behavior of the `File` field. To learn more about how to customize its behavior, check out the [customization documentation](#customization).
-:::
+> [!TIP]
+> The documentation above only demonstrates the default behavior of the `File` field. To learn more about how to customize its behavior, check out the [customization documentation](#customization).
 
 ## Images
 
@@ -359,10 +355,8 @@ Image::make('Profile Photo')
     });
 ```
 
-:::tip Preview Size
-
-By default, the Nova resource detail page will display previews at a width of 318 pixels (636 pixels for "retina displays").
-:::
+> [!TIP]
+> By default, the Nova resource detail page will display previews at a width of 318 pixels (636 pixels for "retina displays").
 
 ### Customizing Thumbnails
 
@@ -383,10 +377,8 @@ Image::make('Profile Photo')
     });
 ```
 
-:::tip Thumbnail Size
-
-By default, Nova will display thumbnails at a width of 32 pixels (64 pixels for "retina displays").
-:::
+> [!TIP]
+> By default, Nova will display thumbnails at a width of 32 pixels (64 pixels for "retina displays").
 
 ### Customizing Accepted File Types
 
