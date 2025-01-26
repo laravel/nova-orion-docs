@@ -1,7 +1,5 @@
 # Themes
 
-[[toc]]
-
 ## Overview
 
 There are times when you'd like the visual style of Nova to match your brand or colors. Nova provides a few ways to customize the look and feel of the admin panel.
