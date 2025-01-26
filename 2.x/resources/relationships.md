@@ -1,7 +1,5 @@
 # Relationships
 
-[[toc]]
-
 In addition to the variety of fields we've already discussed, Nova has full support for all of Laravel's relationships. Once you add relationship fields to your Nova resources, you'll start to experience the full power of the Nova dashboard, as the resource detail page will allow you to quickly view and search a resource's related models:
 
 ![Detail page Relationship](./img/detail-relationships.png)
@@ -34,15 +32,12 @@ HasMany::make('Posts');
 
 Once the field has been added to your resource, it will be displayed on the resource's detail page.
 
-:::warning Plural Resource Names
-
-When defining `HasMany` relationships, make sure to use the plural form of the relationship so Nova can infer the correct singular resource name:
-
-```php
-HasMany::make('Posts');
-```
-
-:::
+> [!WARNING]
+> When defining `HasMany` relationships, make sure to use the plural form of the relationship so Nova can infer the correct singular resource name:
+>
+> ```php
+> HasMany::make('Posts');
+> ```
 
 ## BelongsTo
 
@@ -54,14 +49,12 @@ use Laravel\Nova\Fields\BelongsTo;
 BelongsTo::make('User');
 ```
 
-:::tip Customizing Resource Classes
-You can customize the resource class used by the relation field by setting the second and third parameters of the `make` method:
-
-```php
-BelongsTo::make('Author', 'author', 'App\Nova\User');
-```
-
-:::
+> [!TIP]
+> You can customize the resource class used by the relation field by setting the second and third parameters of the `make` method:
+>
+> ```php
+> BelongsTo::make('Author', 'author', 'App\Nova\User');
+> ```
 
 #### Nullable Relationships
 
@@ -203,10 +196,8 @@ BelongsToMany::make('Roles')
 
 Once the action has been attached to the field, you will be able to select the action and execute it from the relationship index on the parent's resource detail page.
 
-:::tip Actions
-
-To learn more about Nova actions, check out the complete [action documentation](./../actions/defining-actions.md).
-:::
+> [!TIP]
+> To learn more about Nova actions, check out the complete [action documentation](./../actions/defining-actions.md).
 
 #### Title Attributes
 
@@ -273,10 +264,8 @@ As you can see in the example above, the `types` method is used to instruct the 
 
 ![Morph To Type](./img/morph-to-type.png)
 
-:::tip MorphTo Title Attributes
-
-When a `MorphTo` field is shown on a resource creation / update page, the [title attributes](#title-attributes) of the available resources will automatically be displayed.
-:::
+> [!TIP]
+> When a `MorphTo` field is shown on a resource creation / update page, the [title attributes](#title-attributes) of the available resources will automatically be displayed.
 
 #### Nullable Relationships
 
