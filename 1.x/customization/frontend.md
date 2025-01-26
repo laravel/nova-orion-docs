@@ -1,7 +1,5 @@
 # CSS / JavaScript
 
-[[toc]]
-
 ## CSS
 
 Nova utilizes the [Tailwind.css](https://tailwindcss.com/docs/what-is-tailwind/) utility library for all styling. So, you are free to leverage all Tailwind features and classes that are needed by your custom components.
