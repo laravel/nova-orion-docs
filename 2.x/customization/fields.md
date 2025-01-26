@@ -1,7 +1,5 @@
 # Fields
 
-[[toc]]
-
 ## Overview
 
 Nova ships with a variety of field types; however, sometimes you may need a field type that isn't provided out of the box. For this reason, Nova allows you to build custom fields. Custom fields consist of three Vue components that determine how the field is displayed in various contexts.
@@ -199,10 +197,8 @@ public function boot()
 }
 ```
 
-:::tip JavaScript Bootstrap & Routing
-
-Your components are bootstrapped and registered in the `resources/js/field.js` file. You are free to modify this file or register additional components here as needed.
-:::
+> [!TIP]
+> Your components are bootstrapped and registered in the `resources/js/field.js` file. You are free to modify this file or register additional components here as needed.
 
 #### Compiling Assets
 
