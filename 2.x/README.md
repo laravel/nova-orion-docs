@@ -1,7 +1,5 @@
 # Installation
 
-[[toc]]
-
 ## Requirements
 
 Laravel Nova has a few requirements you should be aware of before installing:
@@ -35,10 +33,8 @@ First, unzip the contents of the Nova release into a `nova` directory within you
 ],
 ```
 
-:::warning Hidden Files
-
-When unzipping Nova into your application's `nova` directory, make sure all of Nova's "hidden" files (such as its `.gitignore` file) are included.
-:::
+> [!WARNING]
+> When unzipping Nova into your application's `nova` directory, make sure all of Nova's "hidden" files (such as its `.gitignore` file) are included.
 
 Next, add `laravel/nova` to the `require` section of your `composer.json` file:
 
@@ -57,10 +53,8 @@ After your `composer.json` file has been updated, run the `composer update` comm
 composer update
 ```
 
-:::tip Package Stability
-
-If you are not able to install Nova into your application because of your `minimum-stability` setting, consider setting your `minimum-stability` option to `dev` and your `prefer-stable` option to `true`. This will allow you to install Nova while still preferring stable package releases for your application.
-:::
+> [!TIP]
+> If you are not able to install Nova into your application because of your `minimum-stability` setting, consider setting your `minimum-stability` option to `dev` and your `prefer-stable` option to `true`. This will allow you to install Nova while still preferring stable package releases for your application.
 
 Finally, run the `nova:install` and `migrate` Artisan commands. The `nova:install` command will install Nova's service provider and public assets within your application:
 
@@ -188,9 +182,8 @@ protected function gate()
 
 To update your Nova installation, you may simply download a release Zip file from the Nova website.
 
-:::tip Composer Installations
-If you installed Nova via Composer, you may update Nova using `composer update`, just like any other Composer package.
-:::
+> [!TIP]
+> If you installed Nova via Composer, you may update Nova using `composer update`, just like any other Composer package.
 
 After downloading the Zip file, replace the current contents of your application's `nova` directory with the contents of the Zip file. After updating the directory's contents, you may run the `composer update` command:
 
