@@ -1,7 +1,5 @@
 # Localization
 
-[[toc]]
-
 ### Overview
 
 Nova may be fully localized using Laravel's [localization services](https://laravel.com/docs/localization). After running the `nova:install` command during installation. Your application will contain a `resources/lang/vendor/nova` translation directory.

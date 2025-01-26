@@ -1,7 +1,5 @@
 # Resource Tools
 
-[[toc]]
-
 ## Overview
 
 Resource tools are very similar to [custom tools](./tools.md); however, instead of displaying in the Nova sidebar, resource tools are displayed on a particular resource's detail page. Like Nova tools, resource tools are incredibly customizable, and primarily consist of a single-file Vue component that is totally under your control.
@@ -146,10 +144,8 @@ Often, you will need to define Laravel routes that are called by your tool. When
 
 All routes within this file are automatically defined inside a route group by your tool's `ToolServiceProvider`. The route group specifies that all routes within the group should receive a `/nova-vendor/tool-name` prefix, where `tool-name` is the "kebab-case" name of your tool. So, for example, `/nova-vendor/stripe-inspector`. You are free to modify this route group definition, but take care to make sure your Nova tool will co-exist with other Nova packages.
 
-:::danger Routing Authorization
-
-When building routes for your tool, you should **always** add authorization to these routes using Laravel gates or policies.
-:::
+> [!CAUTION]
+> When building routes for your tool, you should **always** add authorization to these routes using Laravel gates or policies.
 
 ### Assets
 
@@ -216,10 +212,8 @@ public function boot()
 }
 ```
 
-:::tip JavaScript Bootstrap & Routing
-
-Your component is bootstrapped and registered in the `resources/js/tool.js` file. You are free to modify this file or register additional components here as needed.
-:::
+> [!TIP]
+> Your component is bootstrapped and registered in the `resources/js/tool.js` file. You are free to modify this file or register additional components here as needed.
 
 #### Compiling Assets
 
