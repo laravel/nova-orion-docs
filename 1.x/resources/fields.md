@@ -1,7 +1,5 @@
 # Fields
 
-[[toc]]
-
 ## Defining Fields
 
 Each Nova resource contains a `fields` method. This method returns an array of fields, which generally extend the `Laravel\Nova\Fields\Field` class. Nova ships with a variety of fields out of the box, including fields for text inputs, booleans, dates, file uploads, Markdown, and more.
@@ -109,11 +107,8 @@ Text::make('Name', 'name_column')->sortable()
 ```
 
 ## Field Types
-
-:::tip Relationship Fields
-
-This portion of the documentation only discusses non-relationship fields. To learn more about relationship fields, [check out their documentation](/1.0/resources/relationships.html).
-:::
+> [!TIP]
+> This portion of the documentation only discusses non-relationship fields. To learn more about relationship fields, [check out their documentation](/1.0/resources/relationships.html).
 
 Nova ships with a variety of field types. So, let's explore all of the available types and their options:
 
@@ -316,11 +311,8 @@ If you need to render HTML content within the `Heading` field, use the `asHtml` 
 ```php
 Heading::make('<p class="text-danger">* All fields are required.</p>')->asHtml()
 ```
-
-::: tip Headings And Indexes
-
-`Heading` fields are automatically hidden from the resource index page.
-:::
+> [!TIP]
+> `Heading` fields are automatically hidden from the resource index page.
 
 ### ID Field
 
@@ -354,11 +346,8 @@ By default, the `Image` field allows the user to download the linked file. To di
 ```php
 Image::make('Photo')->disableDownload();
 ```
-
-:::tip File Fields
-
-To learn more about defining file fields and handling uploads, check out the additional [file field documentation](./file-fields.md).
-:::
+> [!TIP]
+> To learn more about defining file fields and handling uploads, check out the additional [file field documentation](./file-fields.md).
 
 ### Markdown Field
 
@@ -478,10 +467,8 @@ If you intend to use the `Place` field to search for cities instead of addresses
 Place::make('City')->onlyCities()
 ```
 
-:::tip City Auto-Completion
-
-When using the `Place` field as a city search, the `state` and `country` fields will still receive auto-completion. However, the `postal_code` field will not.
-:::
+> [!TIP]
+> When using the `Place` field as a city search, the `state` and `country` fields will still receive auto-completion. However, the `postal_code` field will not.
 
 #### Configuring Field Auto-Completion
 
@@ -685,10 +672,8 @@ Text::make('Name', function () {
 })
 ```
 
-:::tip Model Attribute Access
-
-As you may have noticed in the example above, you may use `$this` to access the resource's underlying model attributes and relationships.
-:::
+> [!TIP]
+> As you may have noticed in the example above, you may use `$this` to access the resource's underlying model attributes and relationships.
 
 By default, Vue will escape the content of a computed field. If you need to render HTML content within the field, use the `asHtml` method:
 
