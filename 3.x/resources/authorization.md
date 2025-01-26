@@ -1,7 +1,5 @@
 # Authorization
 
-[[toc]]
-
 When Nova is accessed only by you or your development team, you may not need additional authorization before Nova handles incoming requests. However, if you provide access to Nova to your clients or large team of developers, you may wish to authorize certain requests. For example, perhaps only administrators may delete records. Thankfully, Nova takes a simple approach to authorization that leverages many of the Laravel features you are already familiar with.
 
 ## Policies
@@ -207,10 +205,8 @@ class PodcastPolicy
 }
 ```
 
-:::warning Many To Many Authorization
-
-When working with many-to-many relationships, make sure you define the proper authorization policy methods on each of the involved resource's policy classes.
-:::
+> [!WARNING]
+> When working with many-to-many relationships, make sure you define the proper authorization policy methods on each of the involved resource's policy classes.
 
 ### Disabling Authorization
 
@@ -264,10 +260,8 @@ Text::make('Name')
         ->canSeeWhen('viewProfile', $this),
 ```
 
-:::tip Authorization & The "Can" Method
-
-To learn more about Laravel's authorization helpers and the `can` method, check out the full Laravel [authorization documentation](https://laravel.com/docs/authorization#via-the-user-model).
-:::
+> [!TIP]
+> To learn more about Laravel's authorization helpers and the `can` method, check out the full Laravel [authorization documentation](https://laravel.com/docs/authorization#via-the-user-model).
 
 ## Index Filtering
 

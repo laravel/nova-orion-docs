@@ -1,7 +1,5 @@
 # Dashboards
 
-[[toc]]
-
 ## Overview
 
 Nova dashboards provide a way of grouping similar information provided by [metrics](./../metrics/defining-metrics.md) or [cards](../customization/cards.md).
