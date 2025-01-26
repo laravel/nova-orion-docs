@@ -1,7 +1,5 @@
 # The Basics
 
-[[toc]]
-
 ## Introduction
 
 Laravel Nova is a beautiful administration dashboard for Laravel applications. Of course, the primary feature of Nova is the ability to administer your underlying database records using Eloquent. Nova accomplishes this by allowing you to define a Nova "resource" that corresponds to each Eloquent model in your application.
@@ -27,20 +25,18 @@ public static $model = 'App\Models\Post';
 
 Freshly created Nova resources only contain an `ID` field definition. Don't worry, we'll add more fields to our resource soon.
 
-:::warning Reserved Resource Names
-
-Nova contains a few reserved words, which may not be used for resource names.
-
-- Card
-- Dashboard
-- Field
-- Metric
-- Resource
-- Search
-- Script
-- Style
-- Tool
-  :::
+> [!WARNING]
+> Nova contains a few reserved words, which may not be used for resource names.
+>
+> - Card
+> - Dashboard
+> - Field
+> - Metric
+> - Resource
+> - Search
+> - Script
+> - Style
+> - Tool
 
 ## Registering Resources
 

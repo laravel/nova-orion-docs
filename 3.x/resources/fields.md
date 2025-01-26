@@ -1,7 +1,5 @@
 # Fields
 
-[[toc]]
-
 ## Defining Fields
 
 Each Nova resource contains a `fields` method. This method returns an array of fields, which generally extend the `Laravel\Nova\Fields\Field` class. Nova ships with a variety of fields out of the box, including fields for text inputs, booleans, dates, file uploads, Markdown, and more.
@@ -136,9 +134,8 @@ The available methods for individual display contexts are:
 - `fieldsForCreate`
 - `fieldsForUpdate`
 
-:::tip Dynamic Field Methods Precedence ::
-The `fieldsForIndex`, `fieldsForDetail`, `fieldsForCreate`, and `fieldsForUpdate` methods always take precedence over the `fields` method.
-:::
+> [!TIP]
+> The `fieldsForIndex`, `fieldsForDetail`, `fieldsForCreate`, and `fieldsForUpdate` methods always take precedence over the `fields` method.
 
 ## Default Values
 
@@ -237,10 +234,8 @@ Text::make('Name', 'name_column')->sortable(),
 
 ## Field Types
 
-:::tip Relationship Fields
-
-This portion of the documentation only discusses non-relationship fields. To learn more about relationship fields, [check out their documentation](./relationships.html).
-:::
+> [!TIP]
+> This portion of the documentation only discusses non-relationship fields. To learn more about relationship fields, [check out their documentation](./relationships.html).
 
 Nova ships with a variety of field types. So, let's explore all of the available types and their options:
 
@@ -332,10 +327,8 @@ Badge::make('Status')->addTypes([
 ]),
 ```
 
-:::tip Editing Badge Types
-
-By default the `Badge` field is not shown on the edit or update views. If you wish to modify the value represented by the `Badge` field on your edit forms, use another field in combination with the `onlyOnForms` field option.
-:::
+> [!TIP]
+> By default the `Badge` field is not shown on the edit or update views. If you wish to modify the value represented by the `Badge` field on your edit forms, use another field in combination with the `onlyOnForms` field option.
 
 ### Boolean Field
 
@@ -436,10 +429,8 @@ use Laravel\Nova\Fields\Code;
 Code::make('Options')->json(),
 ```
 
-:::tip Code Fields On The Index
-
-By default, Nova will never display a `Code` field on a resource index listing.
-:::
+> [!TIP]
+> By default, Nova will never display a `Code` field on a resource index listing.
 
 #### Editing JSON
 
@@ -449,10 +440,8 @@ If you intend to use a given `Code` field instance to only edit JSON, you may ch
 Code::make('Options')->json(),
 ```
 
-:::warning Code Field JSON Validation
-
-Nova does not automatically apply the `json` validation rule for `Code` fields. This rule must be manually specified during validation if you wish for it to be applied.
-:::
+> [!WARNING]
+> Nova does not automatically apply the `json` validation rule for `Code` fields. This rule must be manually specified during validation if you wish for it to be applied.
 
 #### Syntax Highlighting
 
@@ -493,10 +482,8 @@ Country::make('Country', 'country_code'),
 
 ### Currency Field
 
-:::tip Currency Field Versioning
-
-This documentation refers to the `Currency` field from v2.11.0 onwards. Prior to this, the field was incompatible with PHP 7.4.
-:::
+> [!TIP]
+> This documentation refers to the `Currency` field from v2.11.0 onwards. Prior to this, the field was incompatible with PHP 7.4.
 
 The `Currency` field generates a `Number` field that is automatically formatted using the `brick/money` PHP package. Nova will use `USD` as the default currency; however, this can be changed by modifying the `nova.currency` configuration value:
 
@@ -518,10 +505,8 @@ You may use the `min`, `max`, and `step` methods to set their corresponding attr
 Currency::make('price')->min(1)->max(1000)->step(0.01),
 ```
 
-:::warning Currency Step Limitation
-
-If you plan to customize the currency "step" amount using the `step` method, you should ensure you always call the `step` method after the `currency`, `asMinorUnits`, and `asMajorUnits`. Calling these methods after the `step` method will override the `step` method's behavior.
-:::
+> [!WARNING]
+> If you plan to customize the currency "step" amount using the `step` method, you should ensure you always call the `step` method after the `currency`, `asMinorUnits`, and `asMajorUnits`. Calling these methods after the `step` method will override the `step` method's behavior.
 
 The field's locale will respect the value in your application's `app.locale` configuration value. You can override this behavior by providing a locale code to the `locale` method:
 
@@ -643,10 +628,8 @@ If you need to render HTML content within the `Heading` field, use the `asHtml` 
 Heading::make('<p class="text-danger">* All fields are required.</p>')->asHtml(),
 ```
 
-::: tip Headings And Indexes
-
-`Heading` fields are automatically hidden from the resource index page.
-:::
+> [!TIP]
+> `Heading` fields are automatically hidden from the resource index page.
 
 ### Hidden Field
 
@@ -704,10 +687,8 @@ Image::make('Photo')->disableDownload(),
 
 You may use the `squared` method to display the image's thumbnail with squared edges. Additionally, you may use the `rounded` method to display its thumbnails with fully-rounded edges.
 
-:::tip File Fields
-
-To learn more about defining file fields and handling uploads, check out the additional [file field documentation](./file-fields.md).
-:::
+> [!TIP]
+> To learn more about defining file fields and handling uploads, check out the additional [file field documentation](./file-fields.md).
 
 ### KeyValue Field
 
@@ -734,10 +715,8 @@ KeyValue::make('Meta')
     ->actionText('Add Item'), // Customize the "add row" button text
 ```
 
-:::tip KeyValue Fields On The Index
-
-By default, Nova will never display a `KeyValue` field on a resource index listing.
-:::
+> [!TIP]
+> By default, Nova will never display a `KeyValue` field on a resource index listing.
 
 If you would like to disable the user's ability to edit the keys of the field, you may use the `disableEditingKeys` method to accomplish this. Disabling editing keys with the `disableEditingKeys` method will automatically disable adding rows as well:
 
@@ -827,10 +806,8 @@ PasswordConfirmation::make('Password Confirmation'),
 
 ### Place Field
 
-:::danger Places API Deprecated
-
-Algolia has announced that their [Places API will stop functioning on May 31st, 2022](https://www.algolia.com/blog/product/sunsetting-our-places-feature/).
-:::
+> [!CAUTION]
+> Algolia has announced that their [Places API will stop functioning on May 31st, 2022](https://www.algolia.com/blog/product/sunsetting-our-places-feature/).
 
 The `Place` field leverages the power of the [Algolia Places API](https://community.algolia.com/places/) to provide ultra-fast address searching and auto-completion. An Algolia account is **not required** in order to leverage this field.
 
@@ -890,10 +867,8 @@ If you intend to use the `Place` field to search for cities instead of addresses
 Place::make('City')->onlyCities(),
 ```
 
-:::tip City Auto-Completion
-
-When using the `Place` field as a city search, the `state` and `country` fields will still receive auto-completion. However, the `postal_code` field will not.
-:::
+> [!TIP]
+> When using the `Place` field as a city search, the `state` and `country` fields will still receive auto-completion. However, the `postal_code` field will not.
 
 #### Configuring Field Auto-Completion
 
@@ -1031,10 +1006,8 @@ return $this->countByDays(
 );
 ```
 
-:::tip Default Ranges
-
-A `Sparkline` will always use the first range defined in the `ranges` method of a `Trend`.
-:::
+> [!TIP]
+> A `Sparkline` will always use the first range defined in the `ranges` method of a `Trend`.
 
 #### Customizing The Chart
 
@@ -1289,10 +1262,8 @@ VaporImage::make('Avatar'),
 
 Vapor image files support many of the same methods available to [`Image`](#image-field) fields.
 
-:::tip File Fields
-
-To learn more about defining file fields and handling uploads, check out the additional [file field documentation](./file-fields.md).
-:::
+> [!TIP]
+> To learn more about defining file fields and handling uploads, check out the additional [file field documentation](./file-fields.md).
 
 #### Validating Vapor Image / File Fields
 
@@ -1327,10 +1298,8 @@ Text::make('Name', function ($model) {
 }),
 ```
 
-:::tip Model Attribute Access
-
-As you may have noticed in the example above, you may use `$this` to access the resource's underlying model attributes and relationships.
-:::
+> [!TIP]
+> As you may have noticed in the example above, you may use `$this` to access the resource's underlying model attributes and relationships.
 
 By default, Vue will escape the content of a computed field. If you need to render HTML content within the field, use the `asHtml` method:
 
@@ -1396,10 +1365,8 @@ Text::make('Email')->required(function ($request) {
 })->rules([Rule::requiredIf($this->account_locked)]),
 ```
 
-:::warning <code>required()</code> Limitations
-
-The `required()` method will only add a "required" indicator to the Nova UI. You must still define the related requirement `rules()` that should apply during validation.
-:::
+> [!WARNING]
+> The `required()` method will only add a "required" indicator to the Nova UI. You must still define the related requirement `rules()` that should apply during validation.
 
 ### Nullable Fields
 
